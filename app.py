@@ -1,9 +1,18 @@
-from flask import Flask
+from flask import Flask, jsonify
+
 app = Flask(__name__)
 
+# A simple route to simulate a project dashboard
 @app.route("/")
-def hello():
-   return "Hello hello World!"
+def project_dashboard():
+    project_info = {
+        "project_name": "CI/CD Pipeline Demo",
+        "status": "Running",
+        "version": "v1.0.0",
+        "description": "This is a demo project showcasing CI/CD automation using GitHub Actions and Docker.",
+        "owner": "srrevis",
+    }
+    return jsonify(project_info)
 
 if __name__ == "__main__":
-   app.run(host='0.0.0.0', port=8080)
+    app.run(host='0.0.0.0', port=8080)
