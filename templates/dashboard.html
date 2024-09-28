@@ -5,7 +5,129 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Project Dashboard</title>
     <style>
-        /* Add relevant styles as mentioned in previous examples */
+        /* General styles */
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f7fa;
+        }
+
+        /* Header styles */
+        .header {
+            background-color: #007bff;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Container */
+        .container {
+            max-width: 1100px;
+            margin: 50px auto;
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Section heading */
+        .section h2 {
+            color: #333;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #007bff;
+        }
+
+        /* Project info styles */
+        .section p {
+            font-size: 18px;
+            line-height: 1.6;
+            color: #555;
+        }
+
+        .section strong {
+            color: #333;
+        }
+
+        /* Status indicator */
+        .status {
+            padding: 5px 10px;
+            border-radius: 4px;
+            color: white;
+            font-weight: bold;
+        }
+
+        .status.running {
+            background-color: #28a745;
+        }
+
+        .status.stopped {
+            background-color: #dc3545;
+        }
+
+        /* Progress bar */
+        .progress {
+            background-color: #e9ecef;
+            border-radius: 20px;
+            height: 25px;
+            width: 100%;
+            margin-bottom: 15px;
+            overflow: hidden;
+        }
+
+        .progress-bar {
+            background-color: #28a745;
+            height: 100%;
+            line-height: 25px;
+            color: white;
+            text-align: center;
+            font-weight: bold;
+            transition: width 0.3s ease-in-out;
+        }
+
+        /* Stats container */
+        .stats {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 20px;
+        }
+
+        /* Individual stat */
+        .stat {
+            width: 30%;
+            background-color: #f8f9fa;
+            padding: 20px;
+            text-align: center;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+        }
+
+        .stat h3 {
+            font-size: 22px;
+            color: #007bff;
+            margin-bottom: 10px;
+        }
+
+        .stat p {
+            font-size: 24px;
+            color: #333;
+            font-weight: bold;
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .stats {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .stat {
+                width: 80%;
+                margin-bottom: 20px;
+            }
+        }
     </style>
 </head>
 <body>
