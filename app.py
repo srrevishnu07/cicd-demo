@@ -2,7 +2,6 @@ from flask import Flask, render_template
 
 app = Flask(__name__)
 
-# Dummy data for the dashboard
 project_info = {
     "project_name": "CI/CD Pipeline Demo",
     "status": "Running",
